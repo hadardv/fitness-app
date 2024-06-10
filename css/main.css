@@ -1,0 +1,159 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+
+}
+
+
+.container {
+  display: flex; /* Use Flexbox for layout */
+  justify-content: space-between; /* Space between items */
+}
+
+ ul{
+  list-style: none;
+ }
+
+ li{
+  list-style:none ;
+ }
+
+ a{
+  text-decoration: none;
+  color: black;
+ }
+
+ .side-nav {
+  width: 170px;
+  height: 100vh;
+  background-color: #575757;
+  color: #fff;
+  box-sizing: border-box;
+  position: fixed;
+}
+
+.side-nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+.side-nav li {
+  float: left;
+}
+
+.side-nav a {
+  display: block;
+  color: white;
+  padding: 20px 20px;
+  text-decoration: none;
+
+}
+
+.side-nav a:hover {
+  background-color: #969696;
+  padding: 14px 16px;
+  width: 170px;
+}
+
+.side-nav a.current {
+  background-color: #969696;
+  width: 170px;
+ }
+
+
+/* Style for the main content */
+.main {
+  flex: 1;
+  padding: 20px;
+  box-sizing: border-box;
+  margin-left: 200px;
+  text-align: justify;
+}
+
+#AddWorkout {
+  width: 40%; /* Make the section take up 40% the page */
+  background-color: #bebebe; /* background for the section */
+  padding: 20px; /* Add padding inside the section */
+  border-radius: 5px; /* Rounded corners */
+  float: left;
+}
+
+#AddWorkout,#workout-history h2 {
+  margin-bottom: 20px; /* Space below the heading */
+  color: #333; /* Darker text color for the heading */
+  text-align: center; /* Center the heading */
+}
+
+#workout-form label {
+  display: block; /* Each label on its own line */
+  margin-bottom: 5px; /* Space below the label */
+  font-weight: bold; /* Bold text for labels */
+}
+
+#workout-form input,
+#workout-form select {
+    width: 100%; /* Full width inputs and selects */
+    padding: 10px; /* Padding inside the inputs and selects */
+    margin-bottom: 15px; /* Space below the inputs and selects */
+    border: 1px solid #ccc; /* Light gray border */
+    border-radius: 4px; /* Rounded corners */
+}
+
+#workout-form button {
+    width: 100%; /* Full width button */
+    padding: 10px; /* Padding inside the button */
+    background-color: #333; /* Dark background color for the button */
+    color: #fff; /* White text color */
+    border: none; /* Remove default border */
+    border-radius: 4px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor on hover */
+    font-size: 16px; /* Larger text for the button */
+}
+
+#workout-form button:hover {
+    background-color: #575757; /* Slightly lighter background on hover */
+}
+
+#workout-history{
+  width: 57%; /* Make the section take up 40% the page */
+  background-color: #bebebe; /* background for the section */
+  height: 46vh;
+  display: block;
+  border-radius: 5px;
+  padding: 20px; /* Add padding inside the section */
+  border-radius: 5px; /* Rounded corners */
+  float: right;
+}
+
+#workout-table {
+  width: 100%; /* Table takes up 60% of the page width */
+  margin: 0 auto; /* Center the table horizontally */
+  border-collapse: collapse; /* Collapse borders to avoid double lines */
+  background-color: #fff; /* White background for the table */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Subtle shadow for a 3D effect */
+}
+
+/* Style for table header */
+#workout-table th {
+  background-color: #333; /* Dark background for headers */
+  color: #fff; /* White text color for headers */
+  padding: 10px; /* Padding inside header cells */
+  text-align: left; /* Align text to the left */
+}
+
+/* Style for table rows */
+#workout-table td {
+  padding: 10px; /* Padding inside data cells */
+  border-bottom: 1px solid #ccc; /* Light gray border between rows */
+}
+
+/* Style for alternating row colors */
+#workout-table tr:nth-child(even) {
+  background-color: #f9f9f9; /* Light background for even rows */
+}
+
+
