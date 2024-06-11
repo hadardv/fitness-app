@@ -7,7 +7,7 @@
 }
 
 body{
-  background: url(/images/background2.jpg);
+  background: url(/images/background1.jpg);
   background-size: cover;
 
 }
@@ -43,44 +43,84 @@ section {
   color: black;
  }
 
- .side-nav {
-  width: 170px;
-  height: 100vh;
-  background-color: #b5838d;
-  color: #333;
-  box-sizing: border-box;
+ .sideBar {
   position: fixed;
-}
+  left: -250px;
+  width:200px;
+  height: 100%;
+  background: #fff;
+  transition:all .5s ease;
+ }
 
-.side-nav ul {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  overflow: hidden;
-}
+ .sideBar header {
+  font-size: 22px;
+  color: white;
+  text-align: center;
+  line-height: 70px;
+  background: #b5838d;
+  user-select: none;
+ }
 
-.side-nav li {
-  float: left;
-}
-
-.side-nav a {
+ .sideBar ul li{
   display: block;
+  height: 100%;
+  width: 100%;
+  line-height: 65px;
+  font-size: 16px;
+  color: white;
+  padding-left: 40px;
+  box-sizing: border-box;
+  border-top: 1px solid rgba(255, 255, 255, .1) ;
+  border-bottom: 1px solid rgb(167, 167, 167);
+  transition: .4s;
+ }
+
+
+ ul li:hover{
+  padding-left: 50px;
+ }
+ 
+ #check {
+  display: none;
+ }
+
+ label #btn, label #cancel {
+  position: absolute;
+  cursor: pointer;
+  background: #b5838d;
+  border-radius: 3px;
+ }
+
+ label #btn {
+  left: 40px;
+  top: 25px;
+  font-size: 35px;
+  background: transparent;
+  padding:  6px 12px ;
+  transition: all .5s ;
+ }
+
+ label #cancel {
+  z-index: 1111;
+  left: -157px;
+  top: 17px;
+  font-size: 25px;
   color: #333;
-  font-weight: bold;
-  padding: 20px 20px;
-  text-decoration: none;
+  padding: 4px 9px;
+  transition: all .5s ease ;
+ }
 
-}
+ #check:checked ~ .sideBar{
+  left: 0;
+ }
 
-.side-nav a:hover {
-  background-color: #dbc3c7;
-  padding: 14px 16px;
-  width: 170px;
-}
-
-.side-nav a.current {
-  background-color: #dbc3c7;
-  width: 170px;
+ #check:checked ~ label #btn{
+  left: 200px;
+  opacity: 0;
+  pointer-events: none;
+ }
+ #check:checked ~ label #cancel{
+  left: 157px;
  }
 
 
@@ -96,7 +136,7 @@ section {
 
 #AddWorkout {
   width: 40%; /* Make the section take up 40% the page */
-  background-color: #dad7cd; /* background for the section */
+  background-color: #eeeeee; /* background for the section */
   padding: 20px; /* Add padding inside the section */
   border-radius: 5px; /* Rounded corners */
   margin-bottom: 10px;
@@ -141,7 +181,7 @@ section {
 
 #workout-history{
   width: 57%; /* Make the section take up 40% the page */
-  background-color: #dad7cd; /* background for the section */
+  background-color: #eeeeee; /* background for the section */
   height: 47vh;
   display: block;
   border-radius: 5px;
@@ -191,7 +231,7 @@ section {
 .checklist{
   width: 100%;
   max-width:540px;
-  background-color:#dad7cd ;
+  background-color:#bdbbbb ;
   margin: 100px auto 20px;
   padding: 40px 30px 70px;
   border-radius: 10px;
@@ -219,6 +259,17 @@ section {
   outline: none;
   background: transparent;
   padding: 10px;
+}
+
+.row button{
+  border: none;
+  outline: none;
+  padding: 16px 50px;
+  background-color: #333;
+  color: #fff;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 40px;
 }
 
 #list-container li {
@@ -274,7 +325,7 @@ section {
 
 #weights {
   width: 100%; /* Make the section take up 100% the page */
-  background-color: #dad7cd; /* background for the section */
+  background-color: #eeeeee; /* background for the section */
   padding: 20px; /* Add padding inside the section */
   border-radius: 5px; /* Rounded corners */
   margin-bottom: 10px;

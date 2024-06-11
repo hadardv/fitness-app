@@ -3,19 +3,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/52568da531.js" crossorigin="anonymous"></script>
     <title>Goal Tracker</title>
     <link rel="stylesheet" href="css/main.css">
 </head>
 <body>
 
-    <nav class="side-nav">
-      <ul>
-        <li><a href="workout.html">Workout Tracker</a></li>
-        <li><a href="diet.html">Diet Tracker</a></li>
-        <li><a href="goals.html" class="current">Goal Tracker</a></li>
-      </ul>
-    </nav>
- 
+  <input type="checkbox" id="check">
+  <label for="check">
+    <i class="fas fa-bars" id="btn"></i>
+    <i class="fas fa-times" id="cancel"></i>
+  </label>
+  <div class="sideBar">
+    <header>Menu</header>
+    <ul>
+      <li><a href="workout.html">Workout Tracker</a></li>
+      <li><a href="diet.html">Diet Tracker</a></li>
+      <li><a href="goals.html">Goal Tracker</a></li>
+    </ul>
+  </div>
+  
  <div class="main">
     <div class="checklist">
       <h2>Goal Check List</h2>
@@ -24,9 +31,7 @@
         <button onclick="addGoal()">Add</button>
       </div>
       <ul id="list-container">
-        <!-- <li class="checked">Task 1</li>
-        <li>Task 2</li>
-        <li>Task 3</li> -->
+        
       </ul>
     </div>
  </div>

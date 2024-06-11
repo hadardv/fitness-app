@@ -3,21 +3,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/52568da531.js" crossorigin="anonymous"></script>
     <title>Workout Tracker</title>
     <link rel="stylesheet" href="css/main.css">
 </head>
 <body>
-  <!----- Header ---->
-  <header id="header-home">
-    <div class="container">
-      <nav class="side-nav">
-        <ul>
-          <li><a href="workout.html">Workout Tracker</a></li>
-          <li><a href="diet.html" class="current">Diet Tracker</a></li>
-          <li><a href="goals.html">Goal Tracker</a></li>
-        </ul>
-      </nav>
-    </header>
+  <input type="checkbox" id="check">
+    <label for="check">
+      <i class="fas fa-bars" id="btn"></i>
+      <i class="fas fa-times" id="cancel"></i>
+    </label>
+    <div class="sideBar">
+      <header>Menu</header>
+      <ul>
+        <li><a href="workout.html" >Workout Tracker</a></li>
+        <li><a href="diet.html" >Diet Tracker</a></li>
+        <li><a href="goals.html">Goal Tracker</a></li>
+      </ul>
+    </div>
+
     <script src="js/app.js"></script>
 </body>
 </html>
