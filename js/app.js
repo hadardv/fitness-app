@@ -1,6 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
   const workoutForm = document.getElementById('workout-form');
-  console.log(document.getElementById('workout-table'))
   const workoutTable = document.getElementById('workout-table').getElementsByTagName('tbody')[0];
 
   const weightsForm = document.getElementById('weights-form');
@@ -12,9 +11,7 @@ document.addEventListener('DOMContentLoaded', () => {
   showWorkouts();
   showWeights();
   
-  document.getElementById('testButton').addEventListener('click', () => {
-    alert('JavaScript is working');
-  });
+
   // what happens when pressing submit :
   workoutForm.addEventListener('submit', (event) => {
     event.preventDefault();
@@ -83,9 +80,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
   });
 
- 
 
-  calcForm.addEventListener('dsubmit',(event)=>{
+  calcForm.addEventListener('submit',(event)=>{
     event.preventDefault();
     const age = parseInt(document.getElementById('age').value,10);
     const gender = document.getElementById('gender').value;
