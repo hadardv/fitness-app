@@ -1,15 +1,20 @@
 document.addEventListener('DOMContentLoaded', () => {
   const workoutForm = document.getElementById('workout-form');
+  console.log(document.getElementById('workout-table'))
   const workoutTable = document.getElementById('workout-table').getElementsByTagName('tbody')[0];
 
   const weightsForm = document.getElementById('weights-form');
   const weightsTable = document.getElementById('weights-table').getElementsByTagName('tbody')[0];
 
+  const calcForm = document.getElementById('calculator');
+
   // Load workouts from localStorage when the page is loaded
   showWorkouts();
   showWeights();
   
-
+  document.getElementById('testButton').addEventListener('click', () => {
+    alert('JavaScript is working');
+  });
   // what happens when pressing submit :
   workoutForm.addEventListener('submit', (event) => {
     event.preventDefault();
@@ -76,7 +81,56 @@ document.addEventListener('DOMContentLoaded', () => {
     saveWeightsData(); 
     weightsForm.reset();
 
-  })
+  });
+
+ 
+
+  calcForm.addEventListener('dsubmit',(event)=>{
+    event.preventDefault();
+    const age = parseInt(document.getElementById('age').value,10);
+    const gender = document.getElementById('gender').value;
+    const height = parseFloat(document.getElementById('height').value);
+    const weight = parseFloat(document.getElementById('weight').value);
+    const activity = document.getElementById('activity').value;
+
+    let bmr;
+  if (gender === 'male') {
+    bmr = 10 * weight + 6.25 * height - 5 * age + 5;
+  } else if (gender === 'female') {
+    bmr = 10 * weight + 6.25 * height - 5 * age - 161;
+  }
+
+   // Adjust BMR based on activity level
+   let activityMultiplier;
+   switch (activity) {
+     case '0':
+       activityMultiplier = 1.2;
+       break;
+     case '12':
+       activityMultiplier = 1.375;
+       break;
+     case '34':
+       activityMultiplier = 1.55;
+       break;
+     default:
+       activityMultiplier = 1.2; // Default to sedentary if something goes wrong
+   }
+ 
+   const tdee = bmr * activityMultiplier;
+
+   console.log('Age:', age);
+  console.log('Gender:', gender);
+  console.log('Height:', height);
+  console.log('Weight:', weight);
+  console.log('Activity:', activity);
+  console.log('BMR:', bmr);
+  console.log('Activity Multiplier:', activityMultiplier);
+  console.log('TDEE:', tdee);
+   
+   alert(`Calculated BMR: ${bmr}\nCalculated TDEE (Total Daily Energy Expenditure): ${tdee}`);
+ 
+   calcForm.reset();
+  });
 
   function isValidDate(dateStr) {
     // parse each section from str to int

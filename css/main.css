@@ -407,3 +407,51 @@ section {
 }
 
 
+
+#calorie-calc {
+  width: 50%;
+  width: 40%; /* Make the section take up 40% the page */
+  background-color: #eeeeee; /* background for the section */
+  padding: 20px; /* Add padding inside the section */
+  border-radius: 5px; /* Rounded corners */
+  margin-bottom: 10px;
+  
+}
+
+#calorie-calc,#calculator h2 {
+  margin-bottom: 20px; /* Space below the heading */
+  color: #333; /* Darker text color for the heading */
+  text-align: center; /* Center the heading */
+}
+
+#calculator label {
+  display: block; /* Each label on its own line */
+  margin-bottom: 5px; /* Space below the label */
+  font-weight: bold; /* Bold text for labels */
+}
+
+#calculator input,
+#calculator select {
+    width: 100%; /* Full width inputs and selects */
+    padding: 10px; /* Padding inside the inputs and selects */
+    margin-bottom: 15px; /* Space below the inputs and selects */
+    border: 1px solid #ccc; /* Light gray border */
+    border-radius: 4px; /* Rounded corners */
+}
+
+#calorie-calc #calculator button {
+    width: 100%; /* Full width button */
+    padding: 10px; /* Padding inside the button */
+    background-color: #b5838d; /* Dark background color for the button */
+    color: #fff; /* White text color */
+    border: none; /* Remove default border */
+    border-radius: 4px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor on hover */
+    font-size: 16px; /* Larger text for the button */
+}
+
+#calorie-calc #calculator button:hover {
+    background-color: #c8a3aa; /* Slightly lighter background on hover */
+}
+
+
