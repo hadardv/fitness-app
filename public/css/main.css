@@ -1,16 +1,24 @@
 * {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 
 }
 
 body{
-  background: url(/images/background1.jpg);
-  background-size: cover;
+  margin: 0; /* Removes default margin */
+  padding: 0;
+  
 
 }
+
+.navbar.navbar-expand-lg .navbar-brand,
+.navbar.navbar-expand-lg .nav-link,
+.navbar.navbar-expand-lg .navbar-toggler {
+    color: white !important; /* Force white color */
+}
+
+
 
 .container {
   display: flex; /* Use Flexbox for layout */
@@ -23,7 +31,6 @@ body{
 section {
   flex: 1; /* Allow sections to grow and fill the available space */
   margin: 0 10px; /* Optional: Add some spacing between sections */
-  border: 1px solid #ccc; /* Optional: Add a border for better visibility */
   box-sizing: border-box;
   padding: 10px; /* Optional: Add padding for better content spacing */
   overflow: auto; /* Ensure the content is scrollable if it grows too large */
@@ -43,94 +50,14 @@ section {
   color: black;
  }
 
- .sideBar {
-  position: fixed;
-  left: -250px;
-  width:200px;
-  height: 100%;
-  background: #fff;
-  transition:all .5s ease;
- }
-
- .sideBar header {
-  font-size: 22px;
-  color: white;
-  text-align: center;
-  line-height: 70px;
-  background: #b5838d;
-  user-select: none;
- }
-
- .sideBar ul li{
-  display: block;
-  height: 100%;
-  width: 100%;
-  line-height: 65px;
-  font-size: 16px;
-  color: white;
-  padding-left: 40px;
-  box-sizing: border-box;
-  border-top: 1px solid rgba(255, 255, 255, .1) ;
-  border-bottom: 1px solid rgb(167, 167, 167);
-  transition: .4s;
- }
-
-
- ul li:hover{
-  padding-left: 50px;
- }
- 
- #check {
-  display: none;
- }
-
- label #btn, label #cancel {
-  position: absolute;
-  cursor: pointer;
-  background: #b5838d;
-  border-radius: 3px;
- }
-
- label #btn {
-  left: 40px;
-  top: 25px;
-  font-size: 35px;
-  background: transparent;
-  padding:  6px 12px ;
-  transition: all .5s ;
- }
-
- label #cancel {
-  z-index: 1111;
-  left: -157px;
-  top: 17px;
-  font-size: 25px;
-  color: #333;
-  padding: 4px 9px;
-  transition: all .5s ease ;
- }
-
- #check:checked ~ .sideBar{
-  left: 0;
- }
-
- #check:checked ~ label #btn{
-  left: 200px;
-  opacity: 0;
-  pointer-events: none;
- }
- #check:checked ~ label #cancel{
-  left: 157px;
- }
 
 
 /* Style for the main content */
 .main {
   flex: 1;
-  padding: 20px;
   box-sizing: border-box;
-  margin-left: 200px;
   text-align: justify;
+  margin-top: 20px;
   
 }
 

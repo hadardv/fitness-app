@@ -1,4 +1,5 @@
 const express = require('express');
+const cors = require('cors');
 const path = require('path');
 const bodyParser = require('body-parser');
 const db = require('./database');
@@ -7,14 +8,10 @@ const app = express();
 const port = process.env.PORT || 3000;
 
 app.use(bodyParser.json());
+app.use(cors()); // Enable CORS for all routes
 
 // Serve static files from the "public" directory
 app.use(express.static(path.join(__dirname, 'public')));
-
-// Root route
-app.get('/', (req, res) => {
-  res.send('Fitness Tracker API');
-});
 
 // API routes
 app.get('/api/goals', (req, res) => {
@@ -124,6 +121,11 @@ app.get('/diet', (req, res) => {
 
 app.get('/workout', (req, res) => {
   res.sendFile(path.join(__dirname, 'public', 'workout.html'));
+});
+
+// Root route
+app.get('/', (req, res) => {
+  res.send('Fitness Tracker API');
 });
 
 app.listen(port, () => {
